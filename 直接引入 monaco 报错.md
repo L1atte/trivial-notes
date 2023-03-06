@@ -61,3 +61,25 @@
   解决：将 monaco-editor 降级为 0.34.0
 
   https://github.com/TypeFox/monaco-languageclient/issues/460
+  
+- ```js
+  Uncaught TypeError: antlr4__WEBPACK_IMPORTED_MODULE_0__.default.PredictionContextCache is not a constructor
+      at ./src/ANTLR/SQLiteParser.ts (SQLiteParser.ts:395:1)
+      at __webpack_require__ (bootstrap:24:1)
+      at fn (hot module replacement:62:1)
+      at ./src/ANTLR/index.ts (SQLiteParserListener.ts:451:1)
+      at __webpack_require__ (bootstrap:24:1)
+      at fn (hot module replacement:62:1)
+      at ./src/example/sqlite.js (Visitor.js:42:1)
+      at __webpack_require__ (bootstrap:24:1)
+      at fn (hot module replacement:62:1)
+      at ./src/index.js (sqlite.js:15:1)
+  ```
+
+  解决：`const sharedContextCache = new antlr4.PredictionContextCache();`更改为 `const sharedContextCache = new antlr4.atn.PredictionContextCache();`
+
+- ```js
+  SQLiteParser.js:299 Uncaught TypeError: antlr4__WEBPACK_IMPORTED_MODULE_0__.default.PredictionContextCache is not a constructor
+  ```
+
+  解决：将 antlr4 降级，从4.12.0降级为4.10.1
