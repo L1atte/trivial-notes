@@ -31,3 +31,5 @@ function Counter() {
 ```
 
 ## 每次渲染都有它自己的Effects
+
+## 同步， 而非生命周期
