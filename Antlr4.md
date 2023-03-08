@@ -20,3 +20,18 @@
 
 
 ANTLR 最让我着迷的是，因为它可以针对 JavaScript 运行时，我们可以在前端使用相同的语法来解析传入的源代码，将其转换为一组标记，在语法和语义上验证代码，并且将所有内容与 Microsoft 的[Monaco Editor](https://microsoft.github.io/monaco-editor/)等解决方案集成，以在我们的网页上创建**内置代码编辑器**，完全支持**语法突出显示**和我们自定义语言的**代码验证。**
+
+
+
+## explain of common antlr4 API
+
+- **`antlr4.CharStream.fromString`**
+- **`antlr4.InputStream`**
+- **`antlr4.CommonTokenStream`**
+- **`antlr4.tree.ParseTreeWalker.DEFAULT.walk`**
+
+## 物料:
+
+**antlr4  docs**: https://www.antlr.org/api/Java/org/antlr/v4/runtime/package-summary.html
+
+**the antlr4 for JavaScript runtime**: https://github.com/antlr/antlr4/blob/master/doc/javascript-target.md
