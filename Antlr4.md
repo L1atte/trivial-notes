@@ -1,3 +1,9 @@
+# AST
+
+- ## Lexical analysis aka Tokennization
+
+  这个过程，你的代码会被转译为一系列标记的集合。这些标记不关心它们的组合关系，纯粹是代码的组成部分。你可以把它想象成一个不同类型标记的列表或数组
+
 #  Antlr4
 
 ![compiler](/Users/latte/Documents/image/compiler.png)
