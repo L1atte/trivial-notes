@@ -49,7 +49,10 @@ monaco.editor.defineTheme("newTheme", {
 然后通过`monaco.languages.setMonarchTokensProvider`设置Monarch分词器，其主要参数为：
 
 - `ignoreCase`：忽略分词器的大小写
+
 - `tokenizer`：分词器，通过正则表达式可以划分`monaco-editor`每行的词条。其中属性`root`可以上面的代码方式进行分词。
+
+  > 我们在 tokenizer 中定义了一个 **root** 属性，**root** 是 **tokenizer** 中的一个 **state** , 这就是我们用来编写解析规则（**rule**）的地方，在 **rule** 中，我们可以编写匹配文本的**正则表达式**，然后再给匹配到的文本设置一个执行动作的 **action** ，在 **action** 中，我们可以给匹配到的文本设置 **token class** 。
 
 最后通过`monaco.editor.defineTheme`设置语言的主题，相当于通过规则设置已分词汇的背景色，字体颜色等。其主要参数为：
 
