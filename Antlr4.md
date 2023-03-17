@@ -88,3 +88,7 @@ export interface ExprVisitor<Result> extends ParseTreeVisitor<Result> {
 **antlr4  docs**: https://www.antlr.org/api/Java/org/antlr/v4/runtime/package-summary.html
 
 **the antlr4 for JavaScript runtime**: https://github.com/antlr/antlr4/blob/master/doc/javascript-target.md
+
+**使用编译器前端工具Antlr生成词法、语法分析器(上)**：https://juejin.cn/post/6944574979392569358
+
+**使用编译器前端工具Antlr生成词法、语法分析器(下)**：https://juejin.cn/post/6945290087827505166
