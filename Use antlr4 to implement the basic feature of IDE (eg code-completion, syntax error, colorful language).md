@@ -86,7 +86,7 @@ https://github.com/microsoft/monaco-editor/tree/main/src/basic-languages
 
 ### antlr4-c3 的工作原理
 
-![](https://raw.githubusercontent.com/L1atte/trivial-notes/main/image/auto-completion.png?token=GHSAT0AAAAAAB6RLV3TLRDVXCNHHZKRSKOMZBGNMOQ)
+![](https://raw.githubusercontent.com/L1atte/PicGo/main/img/parse-tree-example.png)
 
 antlr4-c3 的工作原理是计算 `parse tree` 中某一点可用的 `token` 的集合
 
@@ -94,17 +94,17 @@ antlr4-c3 的工作原理是计算 `parse tree` 中某一点可用的 `token` �
 
 ## code-completion 生命周期
 
-![auto-completion](https://raw.githubusercontent.com/L1atte/trivial-notes/main/image/auto-completion.png?token=GHSAT0AAAAAAB6RLV3TLRDVXCNHHZKRSKOMZBGNMOQ)
+![auto-completion](https://raw.githubusercontent.com/L1atte/PicGo/main/img/auto-completion.png)
 
 
 
 ## syntax error 生命周期
 
-![](https://raw.githubusercontent.com/L1atte/trivial-notes/main/image/error-handler.png?token=GHSAT0AAAAAAB6RLV3TXXFA6ON63OMKZBRYZBGNNLQ)
+![](https://raw.githubusercontent.com/L1atte/PicGo/main/img/error-handler.png)
 
 ## antlr4 工作流程
 
-![](https://yalingunayer.com/blog/introduction-to-dsls-using-antlr/compiler.png)
+![](https://raw.githubusercontent.com/L1atte/PicGo/main/img/compiler.png)
 
 - 针对给定的源代码运行具有该语法的词法分析器以生成一组标记
 - 将这些标记输入解析器以生成抽象语法树 (AST)
