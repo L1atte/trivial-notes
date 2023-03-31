@@ -86,7 +86,7 @@ https://github.com/microsoft/monaco-editor/tree/main/src/basic-languages
 
 ### antlr4-c3 的工作原理
 
-![](https://raw.githubusercontent.com/L1atte/trivial-notes/main/image/parse-tree-example.png?token=GHSAT0AAAAAAB6RLV3TK7B3FLM257EDEKFYZBGNESQ)
+![](https://raw.githubusercontent.com/L1atte/trivial-notes/main/image/auto-completion.png?token=GHSAT0AAAAAAB6RLV3TLRDVXCNHHZKRSKOMZBGNMOQ)
 
 antlr4-c3 的工作原理是计算 `parse tree` 中某一点可用的 `token` 的集合
 
@@ -94,10 +94,26 @@ antlr4-c3 的工作原理是计算 `parse tree` 中某一点可用的 `token` �
 
 ## code-completion 生命周期
 
-![auto-completion](https://raw.githubusercontent.com/L1atte/trivial-notes/main/image/auto-completion.png?token=GHSAT0AAAAAAB6RLV3TLDIFEES4EUTQQYHAZBGNDIA)
+![auto-completion](https://raw.githubusercontent.com/L1atte/trivial-notes/main/image/auto-completion.png?token=GHSAT0AAAAAAB6RLV3TLRDVXCNHHZKRSKOMZBGNMOQ)
 
 
 
 ## syntax error 生命周期
 
-![](https://raw.githubusercontent.com/L1atte/trivial-notes/main/image/error-handler.png?token=GHSAT0AAAAAAB6RLV3TOBYXH76KXAKFNG44ZBGNDTA)
+![](https://raw.githubusercontent.com/L1atte/trivial-notes/main/image/error-handler.png?token=GHSAT0AAAAAAB6RLV3TXXFA6ON63OMKZBRYZBGNNLQ)
+
+## antlr4 工作流程
+
+![](https://yalingunayer.com/blog/introduction-to-dsls-using-antlr/compiler.png)
+
+- 针对给定的源代码运行具有该语法的词法分析器以生成一组标记
+- 将这些标记输入解析器以生成抽象语法树 (AST)
+- 让我们的语义分析器检查 AST 以确保它在语义上是有效的
+- 可选地通过优化器提供 AST以裁剪掉不必要的代码
+- 最后从该 AST 生成可执行代码并将其作为输出返回
+
+## 物料:
+
+**antlr4  docs**: https://www.antlr.org/api/Java/org/antlr/v4/runtime/package-summary.html
+
+**the antlr4 for JavaScript runtime**: https://github.com/antlr/antlr4/blob/master/doc/javascript-target.md
